@@ -100,8 +100,8 @@ p {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  width: 62px;
-  height: 62px;
+  width: 102px;
+  height: 102px;
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(12px);
   border-radius: 50%;
