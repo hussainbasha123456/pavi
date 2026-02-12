@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  overflow-x: hidden;
+  text-align: center;
+}
+
+/* Intro */
+#intro video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Main */
+#content {
+  padding: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #c2185b;
+}
+
+h1 span {
+  color: #e91e63;
+}
+
+p {
+  margin: 15px 0 30px;
+  font-size: 1.2rem;
+}
+
+.gift-btn {
+  padding: 15px 30px;
+  background: #e91e63;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(233,30,99,.4);
+}
+
+.gift-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Shop Button */
+.shop-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  border: none;
+}
+
+.shop-btn img {
+  width: 40px;
+}
+
+/* Gift Video */
+#gift video {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+/* Shop */
+#shop {
+  padding: 40px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  width: 180px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.product span {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+/* Tulips */
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("images/tulip1.png"),
+    url("images/tulip2.png");
+  background-repeat: repeat;
+  opacity: 0.15;
+  pointer-events: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Cutie 🌷</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background Flowers -->
+<div class="flowers"></div>
+
+<!-- Intro Video -->
+<div id="intro">
+  <video autoplay muted playsinline>
+    <source src="videos/intro.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Main Content -->
+<div id="content" class="hidden">
+  <h1>Happy Birthday <span>My Cutie 💖</span></h1>
+  <p>You make my world brighter every single day 🌷</p>
+
+  <button class="gift-btn" onclick="openGift()">🎁 Special Gift For You</button>
+
+  <button class="shop-btn" onclick="openShop()">
+    <img src="images/bag.jpeg" alt="Bag">
+  </button>
+</div>
+
+<!-- Gift Video -->
+<div id="gift" class="hidden">
+  <video controls autoplay>
+    <source src="videos/gift.mp4" type="video/mp4">
+  </video>
+
+</div>
+
+<!-- Shop Section -->
+<div id="shop" class="hidden">
+  <h2>Just For You 🛍️</h2>
+
+  <div class="products">
+    <div class="product">
+      <img src="images/gift1.jpeg">
+      <p>bracelet💎</p>
+      <span></span>
+    </div>
+
+    <div class="product">
+      <img src="images/gift2.jpeg">
+      <p>Handbag 👜</p>
+      <span></span>
+    </div>
+
+    <div class="product">
+      <img src="images/gift3.jpeg">
+      <p>Perfume 🌸</p>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
