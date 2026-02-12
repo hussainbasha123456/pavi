@@ -1,68 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday My Cutie 🌷</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Background Flowers -->
-<div class="flowers"></div>
+  <!-- 🌷 Tulip Background -->
+  <div class="flowers"></div>
 
-<!-- Intro Video -->
-<div id="intro">
-  <video autoplay muted playsinline>
-    <source src="videos/intro.mp4" type="video/mp4">
-  </video>
-</div>
+  <!-- 🎬 INTRO VIDEO (auto plays muted on phone) -->
+  <div id="intro">
+    <video autoplay muted playsinline>
+      <source src="videos/intro.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
 
-<!-- Main Content -->
-<div id="content" class="hidden">
-  <h1>Happy Birthday <span>My Cutie 💖</span></h1>
-  <p>You make my world brighter every single day 🌷</p>
+  <!-- 🎉 MAIN CONTENT -->
+  <div id="content" class="hidden" role="main">
+    <h1>Happy Birthday <span>My Cutie 💖</span></h1>
+    <p>
+      On your special day, I just want you to know how incredibly
+      precious you are to me 🌷
+    </p>
 
-  <button class="gift-btn" onclick="openGift()">🎁 Special Gift For You</button>
+    <button class="gift-btn" onclick="openGift()">
+      🎁 Special Gift For You
+    </button>
+  </div>
 
+  <!-- 🎥 GIFT VIDEO -->
+  <div id="gift" class="hidden">
+    <video controls autoplay>
+      <source src="gift.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+
+  <!-- 🛍️ SHOP BUTTON -->
   <button class="shop-btn" onclick="openShop()">
-    <img src="bag.jpeg" alt="Bag"> click here
-
+    <img src="bag.jpeg" alt="Shopping Bag">
   </button>
-</div>
 
-<!-- Gift Video -->
-<div id="gift" class="hidden">
-  <video controls autoplay>
-    <source src="gift.mp4" type="video/mp4">
-  </video>
+  <!-- 🛍️ SHOP SECTION -->
+  <div id="shop" class="hidden">
+    <h2>Just For You 🛍️</h2>
 
-</div>
+    <div class="products">
+      <div class="product">
+        <img src="gift1.jpeg" alt="Gift 1">
+        <p>Necklace 💎</p>
+        <span>₹1999</span>
+      </div>
 
-<!-- Shop Section -->
-<div id="shop" class="hidden">
-  <h2>Just For You 🛍️</h2>
+      <div class="product">
+        <img src="gift2.jpeg" alt="Gift 2">
+        <p>Handbag 👜</p>
+        <span>₹2499</span>
+      </div>
 
-  <div class="products">
-    <div class="product">
-      <img src="gift1.jpeg">
-      <p>bracelet💎</p>
-      <span></span>
-    </div>
-
-    <div class="product">
-      <img src="gift2.jpeg">
-      <p>Handbag 👜</p>
-      <span></span>
-    </div>
-
-    <div class="product">
-      <img src="gift3.jpeg">
-      <p>Perfume 🌸</p>
-      <span></span>
+      <div class="product">
+        <img src="gift3.jpeg" alt="Gift 3">
+        <p>Perfume 🌸</p>
+        <span>₹1599</span>
+      </div>
     </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
+
 </body>
 </html>

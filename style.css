@@ -1,125 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+  --pink: #e91e63;
+  --soft-pink: #ffe4ec;
+  --rose: #c2185b;
+  --glass: rgba(255,255,255,0.45);
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #fff5f8 0%, #ffe8f0 100%);
+  font-family: 'Poppins', sans-serif;
+  color: #5a2a3c;
   overflow-x: hidden;
-  text-align: center;
 }
 
-/* Intro */
+/* 🌷 Soft Tulip Background */
+.flowers {
+  position: fixed;
+  inset: 0;
+  background-image:
+    url("tulip1.jpeg"),
+    url("tulip2.jpeg"),
+    url("tulip1.jpeg");
+  background-size: 180px, 220px, 160px;
+  background-position: 10% 20%, 80% 40%, 50% 80%;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+  pointer-events: none;
+  animation: floatBg 20s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+  from { transform: translateY(0); }
+  to { transform: translateY(-30px); }
+}
+
+/* 🎬 Intro Video */
 #intro video {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
 
-/* Main */
+/* 🌸 Main Content */
 #content {
-  padding: 40px;
+  padding: 70px 20px 120px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
 h1 {
-  font-size: 3rem;
-  color: #c2185b;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: var(--rose);
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
 h1 span {
-  color: #e91e63;
+  color: var(--pink);
 }
 
 p {
-  margin: 15px 0 30px;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  opacity: 0.85;
+  margin-bottom: 45px;
 }
 
+/* 🎁 Gift Button */
 .gift-btn {
-  padding: 15px 30px;
-  background: #e91e63;
+  background: linear-gradient(135deg, #ff4f8b, #e91e63);
   border: none;
-  color: white;
+  padding: 16px 38px;
   font-size: 1.1rem;
-  border-radius: 30px;
+  color: #fff;
+  border-radius: 999px;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(233,30,99,.4);
+  box-shadow: 0 15px 40px rgba(233,30,99,0.45);
+  transition: all .3s ease;
 }
 
 .gift-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 22px 50px rgba(233,30,99,0.55);
 }
 
-/* Shop Button */
+/* 🛍️ Floating Shop Button */
 .shop-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: white;
+  right: 22px;
+  bottom: 22px;
+  width: 62px;
+  height: 62px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
   border-radius: 50%;
-  padding: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
   border: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  cursor: pointer;
+  animation: pulse 2.8s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
 }
 
 .shop-btn img {
-  width: 80px;
+  width: 34px;
 }
 
-/* Gift Video */
+/* 🎥 Gift Video */
+#gift {
+  padding: 60px 20px;
+}
+
 #gift video {
-  width: 90%;
-  max-width: 600px;
-  margin-top: 40px;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 26px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
 }
 
-/* Shop */
+/* 🛍️ Shop Section */
 #shop {
-  padding: 40px;
+  padding: 60px 20px 100px;
+}
+
+#shop h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: var(--rose);
 }
 
 .products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .product {
-  background: white;
-  border-radius: 20px;
-  padding: 15px;
-  width: 180px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border-radius: 26px;
+  padding: 16px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+  transition: transform .3s ease;
+}
+
+.product:hover {
+  transform: translateY(-6px);
 }
 
 .product img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.product p {
+  font-weight: 500;
+  margin-bottom: 4px;
 }
 
 .product span {
-  color: #e91e63;
-  font-weight: bold;
+  color: var(--pink);
+  font-weight: 600;
 }
 
-/* Tulips */
-.flowers {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    url("images/tulip1.png"),
-    url("images/tulip2.png");
-  background-repeat: repeat;
-  opacity: 0.15;
-  pointer-events: none;
+/* 📱 Mobile Polish */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .gift-btn {
+    width: 92%;
+  }
 }
